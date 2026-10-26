@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="直接输入八字四柱，按原始矩阵算法计算五行力量排序与列向量 U = T · S · E₀。">
+  <meta name="color-scheme" content="light">
+  <title>八字五行力量计算器</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到计算器</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">U = T · S · E₀</p>
+        <h1>八字五行力量计算器</h1>
+        <p class="subtitle">直接输入四柱，查看五行力量排序和计算列向量。</p>
+      </div>
+      <a class="source-link" href="https://github.com/Yorick91/Eight-Character-Destiny-Five-Elements-Sorting-Algorithm" target="_blank" rel="noopener noreferrer">算法仓库 ↗</a>
+    </header>
+    <main id="main">
+      <section class="panel input-panel" aria-labelledby="input-heading">
+        <div class="section-heading">
+          <h2 id="input-heading">输入四柱</h2>
+          <span class="quiet-label">无需出生日期</span>
+        </div>
+        <form id="chart-form" novalidate autocomplete="off">
+          <div class="pillar-grid">
+            <label for="year-pillar">年柱<input id="year-pillar" name="year" type="text" maxlength="2" placeholder="丙戌" required spellcheck="false" aria-describedby="input-help form-error"></label>
+            <label for="month-pillar">月柱<input id="month-pillar" name="month" type="text" maxlength="2" placeholder="己亥" required spellcheck="false" aria-describedby="input-help form-error"></label>
+            <label for="day-pillar">日柱<input id="day-pillar" name="day" type="text" maxlength="2" placeholder="癸丑" required spellcheck="false" aria-describedby="input-help form-error"></label>
+            <label for="hour-pillar">时柱<input id="hour-pillar" name="hour" type="text" maxlength="2" placeholder="戊午" required spellcheck="false" aria-describedby="input-help form-error"></label>
+          </div>
+          <p id="input-help" class="help-text">每柱填写两个字，也可在任意输入框粘贴完整八字，例如：<span class="nowrap">丙戌 己亥 癸丑 戊午</span>。</p>
+          <p id="form-error" class="error-message" role="alert" hidden></p>
+          <div class="form-actions">
+            <button class="button primary" type="submit">计算五行力量</button>
+            <button class="button secondary" id="example-button" type="button">试算示例</button>
+            <button class="button text-button" id="clear-button" type="button">清空</button>
+          </div>
+          <p id="form-status" class="status-text" role="status"></p>
+        </form>
+        <noscript><p class="error-message">计算需要 JavaScript。请在浏览器中启用 JavaScript 后刷新页面。</p></noscript>
+      </section>
+      <section id="empty-state" class="empty-state" aria-label="等待输入">填写四柱后点击计算；也可以先试算示例。</section>
+      <section id="results" class="results" aria-labelledby="result-heading" hidden>
+        <div class="result-heading-row">
+          <div>
+            <h2 id="result-heading" tabindex="-1">计算结果</h2>
+            <p id="result-chart" class="result-chart"></p>
+            <p id="result-meta" class="help-text"></p>
+          </div>
+          <button id="copy-button" class="button secondary" type="button">复制结果</button>
+        </div>
+        <p id="result-announcement" class="sr-only" role="status"></p>
+        <p id="copy-status" class="status-text" role="status"></p>
+        <label id="copy-fallback-label" class="help-text" for="copy-fallback" hidden>自动复制不可用，请手动选择下方文本复制。</label>
+        <textarea id="copy-fallback" class="copy-fallback" rows="8" readonly hidden></textarea>
+        <div class="result-grid">
+          <article class="panel ranking-panel">
+            <h3>五行力量排序</h3>
+            <p id="ranking-text" class="ranking-text"></p>
+            <table class="ranking-table">
+              <caption class="sr-only">最终力量由高到低排列</caption>
+              <thead><tr><th scope="col">名次</th><th scope="col">五行</th><th scope="col" class="numeric">力量值</th></tr></thead>
+              <tbody id="ranking-body"></tbody>
+            </table>
+            <p id="ranking-note" class="help-text">按原始数值降序排序；负数保留，不取绝对值。</p>
+          </article>
+          <article class="panel final-vector-panel">
+            <h3>最终列向量 U</h3>
+            <p class="help-text">U = T · S · E₀</p>
+            <div id="final-vector" class="vector-slot"></div>
+            <p class="help-text">分量顺序固定为：木、火、土、金、水。<br>显示至小数点后最多四位。</p>
+            <p id="final-total" class="help-text"></p>
+          </article>
+        </div>
+        <details class="panel calculation-details" id="calculation-details">
+          <summary>查看计算过程与矩阵参数</summary>
+          <div class="details-content">
+            <p class="help-text">先汇总原始分数 E₀，再按月令加权，最后乘生克泄耗矩阵 T。所有向量均按木、火、土、金、水排列。</p>
+            <div class="steps-grid">
+              <section class="calculation-step" aria-labelledby="initial-heading">
+                <h3 id="initial-heading">① 原始列向量 E₀</h3>
+                <div id="initial-vector" class="vector-slot"></div>
+                <p id="initial-total" class="check-text"></p>
+                <p class="help-text">天干各10分；地支藏干合计各10分。</p>
+              </section>
+              <section class="calculation-step" aria-labelledby="seasonal-heading">
+                <h3 id="seasonal-heading">② 季节加权 S · E₀</h3>
+                <div id="seasonal-vector" class="vector-slot"></div>
+                <p id="month-description" class="help-text"></p>
+              </section>
+            </div>
+            <section class="parameter-section" aria-labelledby="season-heading">
+              <h3 id="season-heading">月令季节矩阵 S</h3>
+              <p id="seasonal-formula" class="formula"></p>
+              <div class="table-scroll">
+                <table class="parameter-table">
+                  <caption id="season-caption"></caption>
+                  <thead><tr><th scope="col">月令</th><th scope="col">木</th><th scope="col">火</th><th scope="col">土</th><th scope="col">金</th><th scope="col">水</th></tr></thead>
+                  <tbody id="season-body"></tbody>
+                </table>
+              </div>
+            </section>
+            <section class="parameter-section" aria-labelledby="transform-heading">
+              <h3 id="transform-heading">生克泄耗矩阵 T</h3>
+              <div class="table-scroll">
+                <table class="parameter-table matrix-table">
+                  <caption>行是输出五行，列是输入五行。</caption>
+                  <thead><tr><th scope="col">输出／输入</th><th scope="col">木</th><th scope="col">火</th><th scope="col">土</th><th scope="col">金</th><th scope="col">水</th></tr></thead>
+                  <tbody id="transform-body"></tbody>
+                </table>
+              </div>
+              <p class="help-text">T 的每列合计为0.70，因此 ΣU = 0.70 × Σ(S · E₀)，最终总分不强制为80。</p>
+            </section>
+            <section class="parameter-section" aria-labelledby="contribution-heading">
+              <h3 id="contribution-heading">原始计分明细</h3>
+              <div class="table-scroll">
+                <table class="parameter-table contribution-table">
+                  <caption>每个天干和每个地支均分配10分。</caption>
+                  <thead><tr><th scope="col">位置</th><th scope="col">计分依据</th><th scope="col">木</th><th scope="col">火</th><th scope="col">土</th><th scope="col">金</th><th scope="col">水</th></tr></thead>
+                  <tbody id="contribution-body"></tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </details>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>严格沿用原仓库的藏干权重、月令系数和矩阵算法；不额外加入刑冲合害，也不提供 AI 参考结论。</p>
+      <p>计算在浏览器本地完成，不上传输入内容。研究性模型结果，仅供算法研究与比较。</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="直接输入八字四柱，按原始矩阵算法计算五行力量排序与列向量 U = T · S · E₀。">
+  <meta name="description" content="直接输入八字四柱，按位置加权、三合守恒转移和原始矩阵算法计算五行力量排序与列向量 U = T · S · E₀。">
   <meta name="color-scheme" content="light">
   <title>八字五行力量计算器</title>
   <link rel="icon" href="data:,">
@@ -81,13 +81,13 @@
         <details class="panel calculation-details" id="calculation-details">
           <summary>查看计算过程与矩阵参数</summary>
           <div class="details-content">
-            <p class="help-text">先汇总原始分数 E₀，再按月令加权，最后乘生克泄耗矩阵 T。所有向量均按木、火、土、金、水排列。</p>
+            <p class="help-text">先按天干与地支位置权重汇总基础 E₀，再在 E₀ 层进行三合守恒转移，之后按月令加权，最后乘生克泄耗矩阵 T。所有向量均按木、火、土、金、水排列。</p>
             <div class="steps-grid">
               <section class="calculation-step" aria-labelledby="initial-heading">
                 <h3 id="initial-heading">① 原始列向量 E₀</h3>
                 <div id="initial-vector" class="vector-slot"></div>
                 <p id="initial-total" class="check-text"></p>
-                <p class="help-text">天干各10分；地支藏干合计各10分。</p>
+                <p class="help-text">天干各10分；地支位置权重为年15、月30、日20、时25，内部继续按原藏干比例分配。</p>
               </section>
               <section class="calculation-step" aria-labelledby="seasonal-heading">
                 <h3 id="seasonal-heading">② 季节加权 S · E₀</h3>
@@ -95,6 +95,18 @@
                 <p id="month-description" class="help-text"></p>
               </section>
             </div>
+            <section class="parameter-section" aria-labelledby="trine-heading">
+              <h3 id="trine-heading">③ 三合守恒转移（E₀ 层）</h3>
+              <p id="trine-summary" class="help-text"></p>
+              <div class="table-scroll">
+                <table class="parameter-table">
+                  <caption>三支齐全、含帝旺半合和拱合使用不同基础 λ；有效 λ 还会受月令、透干、位置、冲破、外部克制和六合牵动修正。</caption>
+                  <thead><tr><th scope="col">合局</th><th scope="col">类型</th><th scope="col">所在四柱</th><th scope="col">基础 λ</th><th scope="col">有效 λ</th><th scope="col" class="numeric">转移量</th></tr></thead>
+                  <tbody id="trine-body"></tbody>
+                </table>
+              </div>
+              <p id="trine-conservation" class="check-text"></p>
+            </section>
             <section class="parameter-section" aria-labelledby="season-heading">
               <h3 id="season-heading">月令季节矩阵 S</h3>
               <p id="seasonal-formula" class="formula"></p>
@@ -115,13 +127,13 @@
                   <tbody id="transform-body"></tbody>
                 </table>
               </div>
-              <p class="help-text">T 的每列合计为0.70，因此 ΣU = 0.70 × Σ(S · E₀)，最终总分不强制为80。</p>
+              <p class="help-text">T 的每列合计为0.70，因此 ΣU = 0.70 × Σ(S · E₀)，最终总分不强制为130。</p>
             </section>
             <section class="parameter-section" aria-labelledby="contribution-heading">
               <h3 id="contribution-heading">原始计分明细</h3>
               <div class="table-scroll">
                 <table class="parameter-table contribution-table">
-                  <caption>每个天干和每个地支均分配10分。</caption>
+                  <caption>天干各10分；地支按年15、月30、日20、时25加权，内部按原藏干比例分配。</caption>
                   <thead><tr><th scope="col">位置</th><th scope="col">计分依据</th><th scope="col">木</th><th scope="col">火</th><th scope="col">土</th><th scope="col">金</th><th scope="col">水</th></tr></thead>
                   <tbody id="contribution-body"></tbody>
                 </table>
@@ -132,7 +144,7 @@
       </section>
     </main>
     <footer class="site-footer">
-      <p>严格沿用原仓库的藏干权重、月令系数和矩阵算法；不额外加入刑冲合害，也不提供 AI 参考结论。</p>
+      <p>沿用原仓库的藏干比例、月令系数和矩阵参数；三合只在 E₀ 层按守恒方式转移，不提供 AI 参考结论。</p>
       <p>计算在浏览器本地完成，不上传输入内容。研究性模型结果，仅供算法研究与比较。</p>
     </footer>
   </div>

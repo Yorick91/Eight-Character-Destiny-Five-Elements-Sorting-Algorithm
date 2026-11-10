@@ -85,7 +85,7 @@ function showError(error) {
 
 function renderResult(result) {
   document.getElementById('result-chart').textContent = result.chart;
-  document.getElementById('result-meta').textContent = `月令：${result.monthBranch}月 · 日主：${result.dayStem}${result.dayElement} · 日主五行第${result.dayRank}名${result.hasTies ? '（存在并列）' : ''}`;
+  document.getElementById('result-meta').textContent = `月令：${result.monthBranch}月 · 日主：${result.dayStem}${result.dayElement} · 日主五行第${result.dayRank}名${result.hasTies ? '（存在并列）' : ''} · E₀合计${result.initialTotal}`;
   document.getElementById('ranking-text').textContent = result.rankingText;
   document.getElementById('ranking-body').replaceChildren(...result.ranking.map(entry =>
     createRow([entry.rank, entry.element, formatNumber(entry.value)], 2),
@@ -98,6 +98,23 @@ function renderResult(result) {
   renderVector('seasonal-vector', result.seasonal);
   document.getElementById('initial-total').textContent = `ΣE₀ = ${result.initialTotal} · 校验通过`;
   document.getElementById('final-total').textContent = `ΣU = ${formatNumber(result.total)}；最终总分不强制为80。`;
+  document.getElementById('trine-summary').textContent = result.trine.candidates.length === 0
+    ? `未发现三合或半合；基础 E₀ 与合后 E₀ 均为（${result.baseInitial.join(', ')}）ᵀ。`
+    : `基础 E₀ =（${result.baseInitial.map(formatNumber).join(', ')}）ᵀ；转移后 E₀ =（${result.initial.map(formatNumber).join(', ')}）ᵀ。候选按有效 λ 从大到小处理，同一位置同一藏干来源只转移一次。`;
+  document.getElementById('trine-body').replaceChildren(...result.trine.candidates.map(candidate => {
+    const transferTotal = result.trine.transfers
+      .filter(transfer => transfer.trine === candidate.name)
+      .reduce((total, transfer) => total + transfer.amount, 0);
+    return createRow([
+      candidate.name,
+      candidate.type,
+      candidate.positions.map(position => result.pillars[position]).join('、'),
+      candidate.baseLambda.toFixed(2),
+      candidate.effectiveLambda.toFixed(4),
+      formatNumber(transferTotal),
+    ], 3, true);
+  }));
+  document.getElementById('trine-conservation').textContent = `转移前 ΣE₀ = ${formatNumber(result.trine.totalBefore)}；转移后 ΣE₀ = ${formatNumber(result.trine.totalAfter)}；守恒误差 = ${formatNumber(result.trine.conservationError)}。`;
   document.getElementById('month-description').textContent = `使用月柱「${result.pillars[1]}」的${result.monthBranch}月季节系数。`;
   document.getElementById('seasonal-formula').textContent = `S = diag(${result.seasonalFactors.map(value => value.toFixed(2)).join(', ')})`;
   document.getElementById('season-caption').textContent = `${result.monthBranch}月矩阵的五个对角系数，其余位置为0。`;
@@ -178,6 +195,8 @@ document.getElementById('copy-button').addEventListener('click', async () => {
     `五行力量排序：${result.rankingText}`,
     '分量顺序：木、火、土、金、水',
     `E₀ = (${result.initial.join(', ')})ᵀ`,
+    `基础 E₀ = (${result.baseInitial.join(', ')})ᵀ；三合候选：${result.trine.candidates.length}`,
+    ...result.trine.candidates.map(candidate => `${candidate.name}（${candidate.type}）：λ=${candidate.effectiveLambda.toFixed(4)}`),
     `S·E₀ = (${result.seasonal.map(formatNumber).join(', ')})ᵀ`,
     'U = T·S·E₀，列向量：',
     ...result.final.map(value => `  ${formatNumber(value)}`),

@@ -1,0 +1,3341 @@
+{
+  "recordCounts": {
+    "matrixReference": 15,
+    "matrixImage": 16,
+    "networkHard": 18,
+    "printStrong": 18,
+    "assumptions": 3,
+    "external": 2,
+    "scored": 48
+  },
+  "split": {
+    "training": 30,
+    "holdout": 18,
+    "external": 2
+  },
+  "optimizedConfig": {
+    "branchTotals": [
+      15,
+      30,
+      20,
+      25
+    ],
+    "fullLambda": 0.6,
+    "halfWithEmperorLambda": 0.3,
+    "halfWithoutEmperorLambda": 0.1,
+    "monthParticipationMultiplier": 1.2,
+    "stemProjectionMultiplier": 1.15,
+    "separatedMultiplier": 0.7,
+    "clashMultiplier": 0.5,
+    "controlBreakMultiplier": 0.5,
+    "sixCombinationMultiplier": 0.5,
+    "enableControlBreak": true,
+    "enableSixCombination": true,
+    "motherWeakThreshold": 0.27,
+    "reducedMotherWeight": 0.2,
+    "dayMasterThreshold": 0.4
+  },
+  "optimizedTrainingMetrics": {
+    "tp": 12,
+    "tn": 9,
+    "fp": 4,
+    "fn": 5,
+    "review": 0,
+    "total": 30,
+    "accuracy": 0.7,
+    "strongRecall": 0.7058823529411765,
+    "weakRecall": 0.6923076923076923,
+    "balancedAccuracy": 0.6990950226244343,
+    "details": [
+      {
+        "dataset": "matrix-reference",
+        "id": "1",
+        "pillars": [
+          "甲寅",
+          "丁卯",
+          "甲子",
+          "乙亥"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>火>水>金>土",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              3
+            ],
+            "effectiveLambda": 0.14489999999999997
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "2",
+        "pillars": [
+          "庚申",
+          "辛酉",
+          "甲午",
+          "戊辰"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>土>水>火>木",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "拱合不含帝旺",
+            "positions": [
+              0,
+              3
+            ],
+            "effectiveLambda": 0.034999999999999996
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "3",
+        "pillars": [
+          "癸亥",
+          "戊辰",
+          "甲申",
+          "丙寅"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>土>水>火>金",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "拱合不含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.06899999999999999
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "7",
+        "pillars": [
+          "丙戌",
+          "己亥",
+          "癸丑",
+          "戊午"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>土>火>木>金",
+        "trines": [
+          {
+            "name": "寅午戌合火",
+            "type": "半合含帝旺",
+            "positions": [
+              0,
+              3
+            ],
+            "effectiveLambda": 0.12074999999999998
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "8",
+        "pillars": [
+          "丁亥",
+          "庚戌",
+          "戊寅",
+          "丙辰"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>金>火>木>水",
+        "trines": [
+          {
+            "name": "寅午戌合火",
+            "type": "拱合不含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.017249999999999998
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "9",
+        "pillars": [
+          "丙戌",
+          "辛丑",
+          "丙辰",
+          "庚寅"
+        ],
+        "actual": "强",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>金>火>木>水",
+        "trines": [
+          {
+            "name": "寅午戌合火",
+            "type": "拱合不含帝旺",
+            "positions": [
+              0,
+              3
+            ],
+            "effectiveLambda": 0.04025
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "10",
+        "pillars": [
+          "癸未",
+          "甲子",
+          "己巳",
+          "戊辰"
+        ],
+        "actual": "强",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>土>木>金>火",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              3
+            ],
+            "effectiveLambda": 0.14489999999999997
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "11",
+        "pillars": [
+          "丁亥",
+          "乙巳",
+          "丙午",
+          "癸巳"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "火>土>木>水>金",
+        "trines": []
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "12",
+        "pillars": [
+          "癸酉",
+          "辛酉",
+          "癸巳",
+          "癸丑"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>水>土>火>木",
+        "trines": [
+          {
+            "name": "丑巳酉合金",
+            "type": "三支齐全",
+            "positions": [
+              1,
+              2,
+              3
+            ],
+            "effectiveLambda": 0.5795999999999999
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "13",
+        "pillars": [
+          "乙酉",
+          "己卯",
+          "庚戌",
+          "庚辰"
+        ],
+        "actual": "强",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>金>土>火>水",
+        "trines": []
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "14",
+        "pillars": [
+          "辛未",
+          "壬辰",
+          "癸亥",
+          "戊午"
+        ],
+        "actual": "强",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>木>水>火>金",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "拱合不含帝旺",
+            "positions": [
+              0,
+              2
+            ],
+            "effectiveLambda": 0.034999999999999996
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "15",
+        "pillars": [
+          "壬子",
+          "癸亥",
+          "癸亥",
+          "壬子"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>木>金>土>火",
+        "trines": []
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W01",
+        "pillars": [
+          "辛未",
+          "辛丑",
+          "己丑",
+          "乙亥"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>金>水>木>火",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "拱合不含帝旺",
+            "positions": [
+              0,
+              3
+            ],
+            "effectiveLambda": 0.04025
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W02",
+        "pillars": [
+          "癸未",
+          "己未",
+          "戊戌",
+          "乙卯"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>木>火>金>水",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              3
+            ],
+            "effectiveLambda": 0.14489999999999997
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W03",
+        "pillars": [
+          "癸丑",
+          "戊午",
+          "戊子",
+          "庚申"
+        ],
+        "actual": "弱",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>火>金>水>木",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "半合含帝旺",
+            "positions": [
+              2,
+              3
+            ],
+            "effectiveLambda": 0
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W04",
+        "pillars": [
+          "戊申",
+          "己未",
+          "壬午",
+          "乙巳"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>火>木>金>水",
+        "trines": []
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W05",
+        "pillars": [
+          "丁丑",
+          "戊申",
+          "戊子",
+          "庚申"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>水>土>火>木",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.09
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W06",
+        "pillars": [
+          "戊辰",
+          "乙丑",
+          "癸巳",
+          "癸亥"
+        ],
+        "actual": "弱",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>水>金>木>火",
+        "trines": [
+          {
+            "name": "丑巳酉合金",
+            "type": "拱合不含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.06
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W07",
+        "pillars": [
+          "戊辰",
+          "庚申",
+          "丁酉",
+          "乙巳"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>土>水>火>木",
+        "trines": [
+          {
+            "name": "丑巳酉合金",
+            "type": "半合含帝旺",
+            "positions": [
+              2,
+              3
+            ],
+            "effectiveLambda": 0.1725
+          },
+          {
+            "name": "申子辰合水",
+            "type": "拱合不含帝旺",
+            "positions": [
+              0,
+              1
+            ],
+            "effectiveLambda": 0.06
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W08",
+        "pillars": [
+          "乙丑",
+          "己卯",
+          "己未",
+          "庚午"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>火>土>金>水",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.1035
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W09",
+        "pillars": [
+          "乙丑",
+          "己卯",
+          "己未",
+          "辛巳"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>火>土>金>水",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.207
+          },
+          {
+            "name": "丑巳酉合金",
+            "type": "拱合不含帝旺",
+            "positions": [
+              0,
+              3
+            ],
+            "effectiveLambda": 0.04025
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W10",
+        "pillars": [
+          "壬寅",
+          "辛亥",
+          "乙卯",
+          "辛巳"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>水>金>火>土",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.1035
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W11",
+        "pillars": [
+          "丙申",
+          "辛卯",
+          "戊戌",
+          "戊午"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>火>土>金>水",
+        "trines": [
+          {
+            "name": "寅午戌合火",
+            "type": "半合含帝旺",
+            "positions": [
+              2,
+              3
+            ],
+            "effectiveLambda": 0.1725
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W12",
+        "pillars": [
+          "庚子",
+          "甲申",
+          "戊子",
+          "乙卯"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>金>木>土>火",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "半合含帝旺",
+            "positions": [
+              0,
+              1
+            ],
+            "effectiveLambda": 0.36
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W13",
+        "pillars": [
+          "戊申",
+          "甲寅",
+          "辛酉",
+          "己丑"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>木>土>火>水",
+        "trines": [
+          {
+            "name": "丑巳酉合金",
+            "type": "半合含帝旺",
+            "positions": [
+              2,
+              3
+            ],
+            "effectiveLambda": 0.345
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W14",
+        "pillars": [
+          "乙亥",
+          "甲申",
+          "庚寅",
+          "辛巳"
+        ],
+        "actual": "弱",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>水>木>火>土",
+        "trines": []
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W15",
+        "pillars": [
+          "戊戌",
+          "丙辰",
+          "戊辰",
+          "庚申"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>金>木>火>水",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "拱合不含帝旺",
+            "positions": [
+              2,
+              3
+            ],
+            "effectiveLambda": 0.025
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W16",
+        "pillars": [
+          "乙巳",
+          "辛巳",
+          "甲子",
+          "戊辰"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "火>土>木>水>金",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "半合含帝旺",
+            "positions": [
+              2,
+              3
+            ],
+            "effectiveLambda": 0.3
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W17",
+        "pillars": [
+          "甲子",
+          "癸酉",
+          "甲寅",
+          "乙亥"
+        ],
+        "actual": "强",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>金>木>火>土",
+        "trines": []
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W18",
+        "pillars": [
+          "乙酉",
+          "癸未",
+          "己卯",
+          "癸酉"
+        ],
+        "actual": "弱",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>金>木>火>水",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0
+          }
+        ]
+      }
+    ]
+  },
+  "optimizedHoldoutMetrics": {
+    "tp": 3,
+    "tn": 10,
+    "fp": 3,
+    "fn": 2,
+    "review": 0,
+    "total": 18,
+    "accuracy": 0.7222222222222222,
+    "strongRecall": 0.6,
+    "weakRecall": 0.7692307692307693,
+    "balancedAccuracy": 0.6846153846153846,
+    "details": [
+      {
+        "dataset": "print-strong",
+        "id": "P01",
+        "pillars": [
+          "庚申",
+          "乙酉",
+          "癸巳",
+          "辛酉"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>水>土>火>木",
+        "trines": [
+          {
+            "name": "丑巳酉合金",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.207
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P02",
+        "pillars": [
+          "辛酉",
+          "庚子",
+          "乙酉",
+          "庚辰"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>水>土>木>火",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              3
+            ],
+            "effectiveLambda": 0.126
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P03",
+        "pillars": [
+          "癸未",
+          "乙卯",
+          "丙辰",
+          "庚寅"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>火>水>金>土",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              0,
+              1
+            ],
+            "effectiveLambda": 0.414
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P04",
+        "pillars": [
+          "癸卯",
+          "甲寅",
+          "丁卯",
+          "甲辰"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>火>水>金>土",
+        "trines": []
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P05",
+        "pillars": [
+          "戊戌",
+          "丙辰",
+          "辛丑",
+          "戊戌"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>金>火>木>水",
+        "trines": []
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P06",
+        "pillars": [
+          "丙戌",
+          "戊戌",
+          "辛丑",
+          "戊戌"
+        ],
+        "actual": "弱",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>金>火>木>水",
+        "trines": []
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P07",
+        "pillars": [
+          "壬子",
+          "壬寅",
+          "甲子",
+          "壬申"
+        ],
+        "actual": "弱",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>木>金>火>土",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "半合含帝旺",
+            "positions": [
+              2,
+              3
+            ],
+            "effectiveLambda": 0.1725
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P08",
+        "pillars": [
+          "壬子",
+          "壬子",
+          "乙亥",
+          "丁丑"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>木>金>土>火",
+        "trines": []
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P09",
+        "pillars": [
+          "戊辰",
+          "丙辰",
+          "庚子",
+          "戊寅"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>木>火>水>金",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.18
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P10",
+        "pillars": [
+          "甲子",
+          "丁丑",
+          "辛未",
+          "甲午"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>金>火>木>水",
+        "trines": []
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P11",
+        "pillars": [
+          "丙子",
+          "己亥",
+          "乙酉",
+          "壬午"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>木>金>土>火",
+        "trines": []
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P12",
+        "pillars": [
+          "癸卯",
+          "甲寅",
+          "丁未",
+          "己酉"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>火>土>金>水",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              0,
+              2
+            ],
+            "effectiveLambda": 0
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P13",
+        "pillars": [
+          "甲寅",
+          "甲戌",
+          "丙戌",
+          "乙未"
+        ],
+        "actual": "弱",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>火>木>金>水",
+        "trines": [
+          {
+            "name": "寅午戌合火",
+            "type": "拱合不含帝旺",
+            "positions": [
+              0,
+              1
+            ],
+            "effectiveLambda": 0.13799999999999998
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "C01",
+        "pillars": [
+          "庚申",
+          "甲申",
+          "辛巳",
+          "丁酉"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>水>火>土>木",
+        "trines": [
+          {
+            "name": "丑巳酉合金",
+            "type": "半合含帝旺",
+            "positions": [
+              2,
+              3
+            ],
+            "effectiveLambda": 0.1725
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "C02",
+        "pillars": [
+          "壬寅",
+          "辛亥",
+          "乙卯",
+          "辛巳"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>水>金>火>土",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.1035
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "C03",
+        "pillars": [
+          "甲子",
+          "癸酉",
+          "甲寅",
+          "乙亥"
+        ],
+        "actual": "强",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>金>木>火>土",
+        "trines": []
+      },
+      {
+        "dataset": "print-strong",
+        "id": "C04",
+        "pillars": [
+          "壬申",
+          "癸卯",
+          "甲午",
+          "癸酉"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>水>金>火>土",
+        "trines": []
+      },
+      {
+        "dataset": "print-strong",
+        "id": "C05",
+        "pillars": [
+          "戊寅",
+          "戊午",
+          "辛丑",
+          "戊戌"
+        ],
+        "actual": "强",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "火>土>金>木>水",
+        "trines": [
+          {
+            "name": "寅午戌合火",
+            "type": "三支齐全",
+            "positions": [
+              0,
+              1,
+              3
+            ],
+            "effectiveLambda": 0.504
+          }
+        ]
+      }
+    ]
+  },
+  "optimizedOverallMetrics": {
+    "tp": 15,
+    "tn": 19,
+    "fp": 7,
+    "fn": 7,
+    "review": 0,
+    "total": 48,
+    "accuracy": 0.7083333333333334,
+    "strongRecall": 0.6818181818181818,
+    "weakRecall": 0.7307692307692307,
+    "balancedAccuracy": 0.7062937062937062,
+    "details": [
+      {
+        "dataset": "matrix-reference",
+        "id": "1",
+        "pillars": [
+          "甲寅",
+          "丁卯",
+          "甲子",
+          "乙亥"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>火>水>金>土",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              3
+            ],
+            "effectiveLambda": 0.14489999999999997
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "2",
+        "pillars": [
+          "庚申",
+          "辛酉",
+          "甲午",
+          "戊辰"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>土>水>火>木",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "拱合不含帝旺",
+            "positions": [
+              0,
+              3
+            ],
+            "effectiveLambda": 0.034999999999999996
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "3",
+        "pillars": [
+          "癸亥",
+          "戊辰",
+          "甲申",
+          "丙寅"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>土>水>火>金",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "拱合不含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.06899999999999999
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "7",
+        "pillars": [
+          "丙戌",
+          "己亥",
+          "癸丑",
+          "戊午"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>土>火>木>金",
+        "trines": [
+          {
+            "name": "寅午戌合火",
+            "type": "半合含帝旺",
+            "positions": [
+              0,
+              3
+            ],
+            "effectiveLambda": 0.12074999999999998
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "8",
+        "pillars": [
+          "丁亥",
+          "庚戌",
+          "戊寅",
+          "丙辰"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>金>火>木>水",
+        "trines": [
+          {
+            "name": "寅午戌合火",
+            "type": "拱合不含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.017249999999999998
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "9",
+        "pillars": [
+          "丙戌",
+          "辛丑",
+          "丙辰",
+          "庚寅"
+        ],
+        "actual": "强",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>金>火>木>水",
+        "trines": [
+          {
+            "name": "寅午戌合火",
+            "type": "拱合不含帝旺",
+            "positions": [
+              0,
+              3
+            ],
+            "effectiveLambda": 0.04025
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "10",
+        "pillars": [
+          "癸未",
+          "甲子",
+          "己巳",
+          "戊辰"
+        ],
+        "actual": "强",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>土>木>金>火",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              3
+            ],
+            "effectiveLambda": 0.14489999999999997
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "11",
+        "pillars": [
+          "丁亥",
+          "乙巳",
+          "丙午",
+          "癸巳"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "火>土>木>水>金",
+        "trines": []
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "12",
+        "pillars": [
+          "癸酉",
+          "辛酉",
+          "癸巳",
+          "癸丑"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>水>土>火>木",
+        "trines": [
+          {
+            "name": "丑巳酉合金",
+            "type": "三支齐全",
+            "positions": [
+              1,
+              2,
+              3
+            ],
+            "effectiveLambda": 0.5795999999999999
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "13",
+        "pillars": [
+          "乙酉",
+          "己卯",
+          "庚戌",
+          "庚辰"
+        ],
+        "actual": "强",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>金>土>火>水",
+        "trines": []
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "14",
+        "pillars": [
+          "辛未",
+          "壬辰",
+          "癸亥",
+          "戊午"
+        ],
+        "actual": "强",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>木>水>火>金",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "拱合不含帝旺",
+            "positions": [
+              0,
+              2
+            ],
+            "effectiveLambda": 0.034999999999999996
+          }
+        ]
+      },
+      {
+        "dataset": "matrix-reference",
+        "id": "15",
+        "pillars": [
+          "壬子",
+          "癸亥",
+          "癸亥",
+          "壬子"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>木>金>土>火",
+        "trines": []
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W01",
+        "pillars": [
+          "辛未",
+          "辛丑",
+          "己丑",
+          "乙亥"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>金>水>木>火",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "拱合不含帝旺",
+            "positions": [
+              0,
+              3
+            ],
+            "effectiveLambda": 0.04025
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W02",
+        "pillars": [
+          "癸未",
+          "己未",
+          "戊戌",
+          "乙卯"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>木>火>金>水",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              3
+            ],
+            "effectiveLambda": 0.14489999999999997
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W03",
+        "pillars": [
+          "癸丑",
+          "戊午",
+          "戊子",
+          "庚申"
+        ],
+        "actual": "弱",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>火>金>水>木",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "半合含帝旺",
+            "positions": [
+              2,
+              3
+            ],
+            "effectiveLambda": 0
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W04",
+        "pillars": [
+          "戊申",
+          "己未",
+          "壬午",
+          "乙巳"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>火>木>金>水",
+        "trines": []
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W05",
+        "pillars": [
+          "丁丑",
+          "戊申",
+          "戊子",
+          "庚申"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>水>土>火>木",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.09
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W06",
+        "pillars": [
+          "戊辰",
+          "乙丑",
+          "癸巳",
+          "癸亥"
+        ],
+        "actual": "弱",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>水>金>木>火",
+        "trines": [
+          {
+            "name": "丑巳酉合金",
+            "type": "拱合不含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.06
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W07",
+        "pillars": [
+          "戊辰",
+          "庚申",
+          "丁酉",
+          "乙巳"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>土>水>火>木",
+        "trines": [
+          {
+            "name": "丑巳酉合金",
+            "type": "半合含帝旺",
+            "positions": [
+              2,
+              3
+            ],
+            "effectiveLambda": 0.1725
+          },
+          {
+            "name": "申子辰合水",
+            "type": "拱合不含帝旺",
+            "positions": [
+              0,
+              1
+            ],
+            "effectiveLambda": 0.06
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W08",
+        "pillars": [
+          "乙丑",
+          "己卯",
+          "己未",
+          "庚午"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>火>土>金>水",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.1035
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W09",
+        "pillars": [
+          "乙丑",
+          "己卯",
+          "己未",
+          "辛巳"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>火>土>金>水",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.207
+          },
+          {
+            "name": "丑巳酉合金",
+            "type": "拱合不含帝旺",
+            "positions": [
+              0,
+              3
+            ],
+            "effectiveLambda": 0.04025
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W10",
+        "pillars": [
+          "壬寅",
+          "辛亥",
+          "乙卯",
+          "辛巳"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>水>金>火>土",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.1035
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W11",
+        "pillars": [
+          "丙申",
+          "辛卯",
+          "戊戌",
+          "戊午"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>火>土>金>水",
+        "trines": [
+          {
+            "name": "寅午戌合火",
+            "type": "半合含帝旺",
+            "positions": [
+              2,
+              3
+            ],
+            "effectiveLambda": 0.1725
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W12",
+        "pillars": [
+          "庚子",
+          "甲申",
+          "戊子",
+          "乙卯"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>金>木>土>火",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "半合含帝旺",
+            "positions": [
+              0,
+              1
+            ],
+            "effectiveLambda": 0.36
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W13",
+        "pillars": [
+          "戊申",
+          "甲寅",
+          "辛酉",
+          "己丑"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>木>土>火>水",
+        "trines": [
+          {
+            "name": "丑巳酉合金",
+            "type": "半合含帝旺",
+            "positions": [
+              2,
+              3
+            ],
+            "effectiveLambda": 0.345
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W14",
+        "pillars": [
+          "乙亥",
+          "甲申",
+          "庚寅",
+          "辛巳"
+        ],
+        "actual": "弱",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>水>木>火>土",
+        "trines": []
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W15",
+        "pillars": [
+          "戊戌",
+          "丙辰",
+          "戊辰",
+          "庚申"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>金>木>火>水",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "拱合不含帝旺",
+            "positions": [
+              2,
+              3
+            ],
+            "effectiveLambda": 0.025
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W16",
+        "pillars": [
+          "乙巳",
+          "辛巳",
+          "甲子",
+          "戊辰"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "火>土>木>水>金",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "半合含帝旺",
+            "positions": [
+              2,
+              3
+            ],
+            "effectiveLambda": 0.3
+          }
+        ]
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W17",
+        "pillars": [
+          "甲子",
+          "癸酉",
+          "甲寅",
+          "乙亥"
+        ],
+        "actual": "强",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>金>木>火>土",
+        "trines": []
+      },
+      {
+        "dataset": "network-hard",
+        "id": "W18",
+        "pillars": [
+          "乙酉",
+          "癸未",
+          "己卯",
+          "癸酉"
+        ],
+        "actual": "弱",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>金>木>火>水",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P01",
+        "pillars": [
+          "庚申",
+          "乙酉",
+          "癸巳",
+          "辛酉"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>水>土>火>木",
+        "trines": [
+          {
+            "name": "丑巳酉合金",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.207
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P02",
+        "pillars": [
+          "辛酉",
+          "庚子",
+          "乙酉",
+          "庚辰"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>水>土>木>火",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              3
+            ],
+            "effectiveLambda": 0.126
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P03",
+        "pillars": [
+          "癸未",
+          "乙卯",
+          "丙辰",
+          "庚寅"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>火>水>金>土",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              0,
+              1
+            ],
+            "effectiveLambda": 0.414
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P04",
+        "pillars": [
+          "癸卯",
+          "甲寅",
+          "丁卯",
+          "甲辰"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>火>水>金>土",
+        "trines": []
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P05",
+        "pillars": [
+          "戊戌",
+          "丙辰",
+          "辛丑",
+          "戊戌"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>金>火>木>水",
+        "trines": []
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P06",
+        "pillars": [
+          "丙戌",
+          "戊戌",
+          "辛丑",
+          "戊戌"
+        ],
+        "actual": "弱",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>金>火>木>水",
+        "trines": []
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P07",
+        "pillars": [
+          "壬子",
+          "壬寅",
+          "甲子",
+          "壬申"
+        ],
+        "actual": "弱",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>木>金>火>土",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "半合含帝旺",
+            "positions": [
+              2,
+              3
+            ],
+            "effectiveLambda": 0.1725
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P08",
+        "pillars": [
+          "壬子",
+          "壬子",
+          "乙亥",
+          "丁丑"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>木>金>土>火",
+        "trines": []
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P09",
+        "pillars": [
+          "戊辰",
+          "丙辰",
+          "庚子",
+          "戊寅"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>木>火>水>金",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.18
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P10",
+        "pillars": [
+          "甲子",
+          "丁丑",
+          "辛未",
+          "甲午"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>金>火>木>水",
+        "trines": []
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P11",
+        "pillars": [
+          "丙子",
+          "己亥",
+          "乙酉",
+          "壬午"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>木>金>土>火",
+        "trines": []
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P12",
+        "pillars": [
+          "癸卯",
+          "甲寅",
+          "丁未",
+          "己酉"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>火>土>金>水",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              0,
+              2
+            ],
+            "effectiveLambda": 0
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "P13",
+        "pillars": [
+          "甲寅",
+          "甲戌",
+          "丙戌",
+          "乙未"
+        ],
+        "actual": "弱",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "土>火>木>金>水",
+        "trines": [
+          {
+            "name": "寅午戌合火",
+            "type": "拱合不含帝旺",
+            "positions": [
+              0,
+              1
+            ],
+            "effectiveLambda": 0.13799999999999998
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "C01",
+        "pillars": [
+          "庚申",
+          "甲申",
+          "辛巳",
+          "丁酉"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>水>火>土>木",
+        "trines": [
+          {
+            "name": "丑巳酉合金",
+            "type": "半合含帝旺",
+            "positions": [
+              2,
+              3
+            ],
+            "effectiveLambda": 0.1725
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "C02",
+        "pillars": [
+          "壬寅",
+          "辛亥",
+          "乙卯",
+          "辛巳"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>水>金>火>土",
+        "trines": [
+          {
+            "name": "亥卯未合木",
+            "type": "半合含帝旺",
+            "positions": [
+              1,
+              2
+            ],
+            "effectiveLambda": 0.1035
+          }
+        ]
+      },
+      {
+        "dataset": "print-strong",
+        "id": "C03",
+        "pillars": [
+          "甲子",
+          "癸酉",
+          "甲寅",
+          "乙亥"
+        ],
+        "actual": "强",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>金>木>火>土",
+        "trines": []
+      },
+      {
+        "dataset": "print-strong",
+        "id": "C04",
+        "pillars": [
+          "壬申",
+          "癸卯",
+          "甲午",
+          "癸酉"
+        ],
+        "actual": "强",
+        "prediction": "强",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "木>水>金>火>土",
+        "trines": []
+      },
+      {
+        "dataset": "print-strong",
+        "id": "C05",
+        "pillars": [
+          "戊寅",
+          "戊午",
+          "辛丑",
+          "戊戌"
+        ],
+        "actual": "强",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "火>土>金>木>水",
+        "trines": [
+          {
+            "name": "寅午戌合火",
+            "type": "三支齐全",
+            "positions": [
+              0,
+              1,
+              3
+            ],
+            "effectiveLambda": 0.504
+          }
+        ]
+      }
+    ]
+  },
+  "optimizedExternalMetrics": {
+    "tp": 0,
+    "tn": 2,
+    "fp": 0,
+    "fn": 0,
+    "review": 0,
+    "total": 2,
+    "accuracy": 1,
+    "strongRecall": null,
+    "weakRecall": 1,
+    "balancedAccuracy": null,
+    "details": [
+      {
+        "dataset": "external",
+        "id": "V01",
+        "pillars": [
+          "辛巳",
+          "己亥",
+          "甲申",
+          "庚午"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "水>金>土>木>火",
+        "trines": []
+      },
+      {
+        "dataset": "external",
+        "id": "V02",
+        "pillars": [
+          "庚申",
+          "甲申",
+          "丁卯",
+          "甲辰"
+        ],
+        "actual": "弱",
+        "prediction": "弱",
+        "e0Total": 130,
+        "conservationError": 0,
+        "ranking": "金>水>木>土>火",
+        "trines": [
+          {
+            "name": "申子辰合水",
+            "type": "拱合不含帝旺",
+            "positions": [
+              1,
+              3
+            ],
+            "effectiveLambda": 0.084
+          }
+        ]
+      }
+    ]
+  },
+  "conservation": {
+    "maxConservationError": 0,
+    "totalE0Error": 0
+  },
+  "sensitivity": {
+    "fullLambda": {
+      "低30%": {
+        "records": 64,
+        "rankingChanged": 1,
+        "rankingStable": 63,
+        "dayMasterRankChanged": 0,
+        "classificationChanged": 0
+      },
+      "基准": {
+        "records": 64,
+        "rankingChanged": 0,
+        "rankingStable": 64,
+        "dayMasterRankChanged": 0,
+        "classificationChanged": 0
+      },
+      "高30%": {
+        "records": 64,
+        "rankingChanged": 1,
+        "rankingStable": 63,
+        "dayMasterRankChanged": 1,
+        "classificationChanged": 0
+      }
+    },
+    "halfWithEmperorLambda": {
+      "低30%": {
+        "records": 64,
+        "rankingChanged": 5,
+        "rankingStable": 59,
+        "dayMasterRankChanged": 2,
+        "classificationChanged": 1
+      },
+      "基准": {
+        "records": 64,
+        "rankingChanged": 0,
+        "rankingStable": 64,
+        "dayMasterRankChanged": 0,
+        "classificationChanged": 0
+      },
+      "高30%": {
+        "records": 64,
+        "rankingChanged": 1,
+        "rankingStable": 63,
+        "dayMasterRankChanged": 0,
+        "classificationChanged": 0
+      }
+    },
+    "halfWithoutEmperorLambda": {
+      "低30%": {
+        "records": 64,
+        "rankingChanged": 1,
+        "rankingStable": 63,
+        "dayMasterRankChanged": 0,
+        "classificationChanged": 0
+      },
+      "基准": {
+        "records": 64,
+        "rankingChanged": 0,
+        "rankingStable": 64,
+        "dayMasterRankChanged": 0,
+        "classificationChanged": 0
+      },
+      "高30%": {
+        "records": 64,
+        "rankingChanged": 1,
+        "rankingStable": 63,
+        "dayMasterRankChanged": 0,
+        "classificationChanged": 0
+      }
+    }
+  },
+  "evaluations": {
+    "legacyEqualBranches": {
+      "overall": {
+        "前三法": {
+          "tp": 22,
+          "tn": 5,
+          "fp": 21,
+          "fn": 0,
+          "review": 0,
+          "total": 48,
+          "accuracy": 0.5625,
+          "strongRecall": 1,
+          "weakRecall": 0.19230769230769232,
+          "balancedAccuracy": 0.5961538461538461
+        },
+        "前二法": {
+          "tp": 20,
+          "tn": 8,
+          "fp": 18,
+          "fn": 2,
+          "review": 0,
+          "total": 48,
+          "accuracy": 0.5833333333333334,
+          "strongRecall": 0.9090909090909091,
+          "weakRecall": 0.3076923076923077,
+          "balancedAccuracy": 0.6083916083916083
+        },
+        "扶身占比法": {
+          "tp": 19,
+          "tn": 8,
+          "fp": 18,
+          "fn": 3,
+          "review": 0,
+          "total": 48,
+          "accuracy": 0.5625,
+          "strongRecall": 0.8636363636363636,
+          "weakRecall": 0.3076923076923077,
+          "balancedAccuracy": 0.5856643356643356
+        },
+        "两阶段扶身印比法": {
+          "tp": 18,
+          "tn": 18,
+          "fp": 8,
+          "fn": 4,
+          "review": 0,
+          "total": 48,
+          "accuracy": 0.75,
+          "strongRecall": 0.8181818181818182,
+          "weakRecall": 0.6923076923076923,
+          "balancedAccuracy": 0.7552447552447552
+        }
+      },
+      "byDataset": {
+        "前三法": {
+          "matrix-reference": {
+            "tp": 11,
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "review": 0,
+            "total": 12,
+            "accuracy": 1,
+            "strongRecall": 1,
+            "weakRecall": 1,
+            "balancedAccuracy": 1
+          },
+          "network-hard": {
+            "tp": 6,
+            "tn": 2,
+            "fp": 10,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.4444444444444444,
+            "strongRecall": 1,
+            "weakRecall": 0.16666666666666666,
+            "balancedAccuracy": 0.5833333333333334
+          },
+          "print-strong": {
+            "tp": 5,
+            "tn": 2,
+            "fp": 11,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.3888888888888889,
+            "strongRecall": 1,
+            "weakRecall": 0.15384615384615385,
+            "balancedAccuracy": 0.5769230769230769
+          }
+        },
+        "前二法": {
+          "matrix-reference": {
+            "tp": 10,
+            "tn": 1,
+            "fp": 0,
+            "fn": 1,
+            "review": 0,
+            "total": 12,
+            "accuracy": 0.9166666666666666,
+            "strongRecall": 0.9090909090909091,
+            "weakRecall": 1,
+            "balancedAccuracy": 0.9545454545454546
+          },
+          "network-hard": {
+            "tp": 6,
+            "tn": 3,
+            "fp": 9,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.5,
+            "strongRecall": 1,
+            "weakRecall": 0.25,
+            "balancedAccuracy": 0.625
+          },
+          "print-strong": {
+            "tp": 4,
+            "tn": 4,
+            "fp": 9,
+            "fn": 1,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.4444444444444444,
+            "strongRecall": 0.8,
+            "weakRecall": 0.3076923076923077,
+            "balancedAccuracy": 0.5538461538461539
+          }
+        },
+        "扶身占比法": {
+          "matrix-reference": {
+            "tp": 8,
+            "tn": 1,
+            "fp": 0,
+            "fn": 3,
+            "review": 0,
+            "total": 12,
+            "accuracy": 0.75,
+            "strongRecall": 0.7272727272727273,
+            "weakRecall": 1,
+            "balancedAccuracy": 0.8636363636363636
+          },
+          "network-hard": {
+            "tp": 6,
+            "tn": 6,
+            "fp": 6,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.6666666666666666,
+            "strongRecall": 1,
+            "weakRecall": 0.5,
+            "balancedAccuracy": 0.75
+          },
+          "print-strong": {
+            "tp": 5,
+            "tn": 1,
+            "fp": 12,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.3333333333333333,
+            "strongRecall": 1,
+            "weakRecall": 0.07692307692307693,
+            "balancedAccuracy": 0.5384615384615384
+          }
+        },
+        "两阶段扶身印比法": {
+          "matrix-reference": {
+            "tp": 8,
+            "tn": 1,
+            "fp": 0,
+            "fn": 3,
+            "review": 0,
+            "total": 12,
+            "accuracy": 0.75,
+            "strongRecall": 0.7272727272727273,
+            "weakRecall": 1,
+            "balancedAccuracy": 0.8636363636363636
+          },
+          "network-hard": {
+            "tp": 6,
+            "tn": 6,
+            "fp": 6,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.6666666666666666,
+            "strongRecall": 1,
+            "weakRecall": 0.5,
+            "balancedAccuracy": 0.75
+          },
+          "print-strong": {
+            "tp": 4,
+            "tn": 11,
+            "fp": 2,
+            "fn": 1,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.8333333333333334,
+            "strongRecall": 0.8,
+            "weakRecall": 0.8461538461538461,
+            "balancedAccuracy": 0.823076923076923
+          }
+        }
+      },
+      "externalTwoStage": {
+        "tp": 0,
+        "tn": 2,
+        "fp": 0,
+        "fn": 0,
+        "review": 0,
+        "total": 2,
+        "accuracy": 1,
+        "strongRecall": null,
+        "weakRecall": 1,
+        "balancedAccuracy": null
+      }
+    },
+    "positionWeightedNoTrine": {
+      "overall": {
+        "前三法": {
+          "tp": 22,
+          "tn": 5,
+          "fp": 21,
+          "fn": 0,
+          "review": 0,
+          "total": 48,
+          "accuracy": 0.5625,
+          "strongRecall": 1,
+          "weakRecall": 0.19230769230769232,
+          "balancedAccuracy": 0.5961538461538461
+        },
+        "前二法": {
+          "tp": 18,
+          "tn": 11,
+          "fp": 15,
+          "fn": 4,
+          "review": 0,
+          "total": 48,
+          "accuracy": 0.6041666666666666,
+          "strongRecall": 0.8181818181818182,
+          "weakRecall": 0.4230769230769231,
+          "balancedAccuracy": 0.6206293706293706
+        },
+        "扶身占比法": {
+          "tp": 18,
+          "tn": 6,
+          "fp": 20,
+          "fn": 4,
+          "review": 0,
+          "total": 48,
+          "accuracy": 0.5,
+          "strongRecall": 0.8181818181818182,
+          "weakRecall": 0.23076923076923078,
+          "balancedAccuracy": 0.5244755244755245
+        },
+        "两阶段扶身印比法": {
+          "tp": 15,
+          "tn": 19,
+          "fp": 7,
+          "fn": 7,
+          "review": 0,
+          "total": 48,
+          "accuracy": 0.7083333333333334,
+          "strongRecall": 0.6818181818181818,
+          "weakRecall": 0.7307692307692307,
+          "balancedAccuracy": 0.7062937062937062
+        }
+      },
+      "byDataset": {
+        "前三法": {
+          "matrix-reference": {
+            "tp": 11,
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "review": 0,
+            "total": 12,
+            "accuracy": 1,
+            "strongRecall": 1,
+            "weakRecall": 1,
+            "balancedAccuracy": 1
+          },
+          "network-hard": {
+            "tp": 6,
+            "tn": 2,
+            "fp": 10,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.4444444444444444,
+            "strongRecall": 1,
+            "weakRecall": 0.16666666666666666,
+            "balancedAccuracy": 0.5833333333333334
+          },
+          "print-strong": {
+            "tp": 5,
+            "tn": 2,
+            "fp": 11,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.3888888888888889,
+            "strongRecall": 1,
+            "weakRecall": 0.15384615384615385,
+            "balancedAccuracy": 0.5769230769230769
+          }
+        },
+        "前二法": {
+          "matrix-reference": {
+            "tp": 10,
+            "tn": 1,
+            "fp": 0,
+            "fn": 1,
+            "review": 0,
+            "total": 12,
+            "accuracy": 0.9166666666666666,
+            "strongRecall": 0.9090909090909091,
+            "weakRecall": 1,
+            "balancedAccuracy": 0.9545454545454546
+          },
+          "network-hard": {
+            "tp": 5,
+            "tn": 7,
+            "fp": 5,
+            "fn": 1,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.6666666666666666,
+            "strongRecall": 0.8333333333333334,
+            "weakRecall": 0.5833333333333334,
+            "balancedAccuracy": 0.7083333333333334
+          },
+          "print-strong": {
+            "tp": 3,
+            "tn": 3,
+            "fp": 10,
+            "fn": 2,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.3333333333333333,
+            "strongRecall": 0.6,
+            "weakRecall": 0.23076923076923078,
+            "balancedAccuracy": 0.41538461538461535
+          }
+        },
+        "扶身占比法": {
+          "matrix-reference": {
+            "tp": 7,
+            "tn": 1,
+            "fp": 0,
+            "fn": 4,
+            "review": 0,
+            "total": 12,
+            "accuracy": 0.6666666666666666,
+            "strongRecall": 0.6363636363636364,
+            "weakRecall": 1,
+            "balancedAccuracy": 0.8181818181818181
+          },
+          "network-hard": {
+            "tp": 6,
+            "tn": 5,
+            "fp": 7,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.6111111111111112,
+            "strongRecall": 1,
+            "weakRecall": 0.4166666666666667,
+            "balancedAccuracy": 0.7083333333333334
+          },
+          "print-strong": {
+            "tp": 5,
+            "tn": 0,
+            "fp": 13,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.2777777777777778,
+            "strongRecall": 1,
+            "weakRecall": 0,
+            "balancedAccuracy": 0.5
+          }
+        },
+        "两阶段扶身印比法": {
+          "matrix-reference": {
+            "tp": 7,
+            "tn": 1,
+            "fp": 0,
+            "fn": 4,
+            "review": 0,
+            "total": 12,
+            "accuracy": 0.6666666666666666,
+            "strongRecall": 0.6363636363636364,
+            "weakRecall": 1,
+            "balancedAccuracy": 0.8181818181818181
+          },
+          "network-hard": {
+            "tp": 5,
+            "tn": 7,
+            "fp": 5,
+            "fn": 1,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.6666666666666666,
+            "strongRecall": 0.8333333333333334,
+            "weakRecall": 0.5833333333333334,
+            "balancedAccuracy": 0.7083333333333334
+          },
+          "print-strong": {
+            "tp": 3,
+            "tn": 11,
+            "fp": 2,
+            "fn": 2,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.7777777777777778,
+            "strongRecall": 0.6,
+            "weakRecall": 0.8461538461538461,
+            "balancedAccuracy": 0.7230769230769231
+          }
+        }
+      },
+      "externalTwoStage": {
+        "tp": 0,
+        "tn": 2,
+        "fp": 0,
+        "fn": 0,
+        "review": 0,
+        "total": 2,
+        "accuracy": 1,
+        "strongRecall": null,
+        "weakRecall": 1,
+        "balancedAccuracy": null
+      }
+    },
+    "positionWeightedDefaultTrine": {
+      "overall": {
+        "前三法": {
+          "tp": 22,
+          "tn": 6,
+          "fp": 20,
+          "fn": 0,
+          "review": 0,
+          "total": 48,
+          "accuracy": 0.5833333333333334,
+          "strongRecall": 1,
+          "weakRecall": 0.23076923076923078,
+          "balancedAccuracy": 0.6153846153846154
+        },
+        "前二法": {
+          "tp": 17,
+          "tn": 11,
+          "fp": 15,
+          "fn": 5,
+          "review": 0,
+          "total": 48,
+          "accuracy": 0.5833333333333334,
+          "strongRecall": 0.7727272727272727,
+          "weakRecall": 0.4230769230769231,
+          "balancedAccuracy": 0.5979020979020979
+        },
+        "扶身占比法": {
+          "tp": 18,
+          "tn": 6,
+          "fp": 20,
+          "fn": 4,
+          "review": 0,
+          "total": 48,
+          "accuracy": 0.5,
+          "strongRecall": 0.8181818181818182,
+          "weakRecall": 0.23076923076923078,
+          "balancedAccuracy": 0.5244755244755245
+        },
+        "两阶段扶身印比法": {
+          "tp": 15,
+          "tn": 19,
+          "fp": 7,
+          "fn": 7,
+          "review": 0,
+          "total": 48,
+          "accuracy": 0.7083333333333334,
+          "strongRecall": 0.6818181818181818,
+          "weakRecall": 0.7307692307692307,
+          "balancedAccuracy": 0.7062937062937062
+        }
+      },
+      "byDataset": {
+        "前三法": {
+          "matrix-reference": {
+            "tp": 11,
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "review": 0,
+            "total": 12,
+            "accuracy": 1,
+            "strongRecall": 1,
+            "weakRecall": 1,
+            "balancedAccuracy": 1
+          },
+          "network-hard": {
+            "tp": 6,
+            "tn": 3,
+            "fp": 9,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.5,
+            "strongRecall": 1,
+            "weakRecall": 0.25,
+            "balancedAccuracy": 0.625
+          },
+          "print-strong": {
+            "tp": 5,
+            "tn": 2,
+            "fp": 11,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.3888888888888889,
+            "strongRecall": 1,
+            "weakRecall": 0.15384615384615385,
+            "balancedAccuracy": 0.5769230769230769
+          }
+        },
+        "前二法": {
+          "matrix-reference": {
+            "tp": 9,
+            "tn": 1,
+            "fp": 0,
+            "fn": 2,
+            "review": 0,
+            "total": 12,
+            "accuracy": 0.8333333333333334,
+            "strongRecall": 0.8181818181818182,
+            "weakRecall": 1,
+            "balancedAccuracy": 0.9090909090909092
+          },
+          "network-hard": {
+            "tp": 5,
+            "tn": 8,
+            "fp": 4,
+            "fn": 1,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.7222222222222222,
+            "strongRecall": 0.8333333333333334,
+            "weakRecall": 0.6666666666666666,
+            "balancedAccuracy": 0.75
+          },
+          "print-strong": {
+            "tp": 3,
+            "tn": 2,
+            "fp": 11,
+            "fn": 2,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.2777777777777778,
+            "strongRecall": 0.6,
+            "weakRecall": 0.15384615384615385,
+            "balancedAccuracy": 0.3769230769230769
+          }
+        },
+        "扶身占比法": {
+          "matrix-reference": {
+            "tp": 7,
+            "tn": 1,
+            "fp": 0,
+            "fn": 4,
+            "review": 0,
+            "total": 12,
+            "accuracy": 0.6666666666666666,
+            "strongRecall": 0.6363636363636364,
+            "weakRecall": 1,
+            "balancedAccuracy": 0.8181818181818181
+          },
+          "network-hard": {
+            "tp": 6,
+            "tn": 5,
+            "fp": 7,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.6111111111111112,
+            "strongRecall": 1,
+            "weakRecall": 0.4166666666666667,
+            "balancedAccuracy": 0.7083333333333334
+          },
+          "print-strong": {
+            "tp": 5,
+            "tn": 0,
+            "fp": 13,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.2777777777777778,
+            "strongRecall": 1,
+            "weakRecall": 0,
+            "balancedAccuracy": 0.5
+          }
+        },
+        "两阶段扶身印比法": {
+          "matrix-reference": {
+            "tp": 7,
+            "tn": 1,
+            "fp": 0,
+            "fn": 4,
+            "review": 0,
+            "total": 12,
+            "accuracy": 0.6666666666666666,
+            "strongRecall": 0.6363636363636364,
+            "weakRecall": 1,
+            "balancedAccuracy": 0.8181818181818181
+          },
+          "network-hard": {
+            "tp": 5,
+            "tn": 8,
+            "fp": 4,
+            "fn": 1,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.7222222222222222,
+            "strongRecall": 0.8333333333333334,
+            "weakRecall": 0.6666666666666666,
+            "balancedAccuracy": 0.75
+          },
+          "print-strong": {
+            "tp": 3,
+            "tn": 10,
+            "fp": 3,
+            "fn": 2,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.7222222222222222,
+            "strongRecall": 0.6,
+            "weakRecall": 0.7692307692307693,
+            "balancedAccuracy": 0.6846153846153846
+          }
+        }
+      },
+      "externalTwoStage": {
+        "tp": 0,
+        "tn": 2,
+        "fp": 0,
+        "fn": 0,
+        "review": 0,
+        "total": 2,
+        "accuracy": 1,
+        "strongRecall": null,
+        "weakRecall": 1,
+        "balancedAccuracy": null
+      }
+    },
+    "positionWeightedOptimizedTrine": {
+      "overall": {
+        "前三法": {
+          "tp": 22,
+          "tn": 6,
+          "fp": 20,
+          "fn": 0,
+          "review": 0,
+          "total": 48,
+          "accuracy": 0.5833333333333334,
+          "strongRecall": 1,
+          "weakRecall": 0.23076923076923078,
+          "balancedAccuracy": 0.6153846153846154
+        },
+        "前二法": {
+          "tp": 17,
+          "tn": 11,
+          "fp": 15,
+          "fn": 5,
+          "review": 0,
+          "total": 48,
+          "accuracy": 0.5833333333333334,
+          "strongRecall": 0.7727272727272727,
+          "weakRecall": 0.4230769230769231,
+          "balancedAccuracy": 0.5979020979020979
+        },
+        "扶身占比法": {
+          "tp": 18,
+          "tn": 6,
+          "fp": 20,
+          "fn": 4,
+          "review": 0,
+          "total": 48,
+          "accuracy": 0.5,
+          "strongRecall": 0.8181818181818182,
+          "weakRecall": 0.23076923076923078,
+          "balancedAccuracy": 0.5244755244755245
+        },
+        "两阶段扶身印比法": {
+          "tp": 15,
+          "tn": 19,
+          "fp": 7,
+          "fn": 7,
+          "review": 0,
+          "total": 48,
+          "accuracy": 0.7083333333333334,
+          "strongRecall": 0.6818181818181818,
+          "weakRecall": 0.7307692307692307,
+          "balancedAccuracy": 0.7062937062937062
+        }
+      },
+      "byDataset": {
+        "前三法": {
+          "matrix-reference": {
+            "tp": 11,
+            "tn": 1,
+            "fp": 0,
+            "fn": 0,
+            "review": 0,
+            "total": 12,
+            "accuracy": 1,
+            "strongRecall": 1,
+            "weakRecall": 1,
+            "balancedAccuracy": 1
+          },
+          "network-hard": {
+            "tp": 6,
+            "tn": 3,
+            "fp": 9,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.5,
+            "strongRecall": 1,
+            "weakRecall": 0.25,
+            "balancedAccuracy": 0.625
+          },
+          "print-strong": {
+            "tp": 5,
+            "tn": 2,
+            "fp": 11,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.3888888888888889,
+            "strongRecall": 1,
+            "weakRecall": 0.15384615384615385,
+            "balancedAccuracy": 0.5769230769230769
+          }
+        },
+        "前二法": {
+          "matrix-reference": {
+            "tp": 9,
+            "tn": 1,
+            "fp": 0,
+            "fn": 2,
+            "review": 0,
+            "total": 12,
+            "accuracy": 0.8333333333333334,
+            "strongRecall": 0.8181818181818182,
+            "weakRecall": 1,
+            "balancedAccuracy": 0.9090909090909092
+          },
+          "network-hard": {
+            "tp": 5,
+            "tn": 8,
+            "fp": 4,
+            "fn": 1,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.7222222222222222,
+            "strongRecall": 0.8333333333333334,
+            "weakRecall": 0.6666666666666666,
+            "balancedAccuracy": 0.75
+          },
+          "print-strong": {
+            "tp": 3,
+            "tn": 2,
+            "fp": 11,
+            "fn": 2,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.2777777777777778,
+            "strongRecall": 0.6,
+            "weakRecall": 0.15384615384615385,
+            "balancedAccuracy": 0.3769230769230769
+          }
+        },
+        "扶身占比法": {
+          "matrix-reference": {
+            "tp": 7,
+            "tn": 1,
+            "fp": 0,
+            "fn": 4,
+            "review": 0,
+            "total": 12,
+            "accuracy": 0.6666666666666666,
+            "strongRecall": 0.6363636363636364,
+            "weakRecall": 1,
+            "balancedAccuracy": 0.8181818181818181
+          },
+          "network-hard": {
+            "tp": 6,
+            "tn": 5,
+            "fp": 7,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.6111111111111112,
+            "strongRecall": 1,
+            "weakRecall": 0.4166666666666667,
+            "balancedAccuracy": 0.7083333333333334
+          },
+          "print-strong": {
+            "tp": 5,
+            "tn": 0,
+            "fp": 13,
+            "fn": 0,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.2777777777777778,
+            "strongRecall": 1,
+            "weakRecall": 0,
+            "balancedAccuracy": 0.5
+          }
+        },
+        "两阶段扶身印比法": {
+          "matrix-reference": {
+            "tp": 7,
+            "tn": 1,
+            "fp": 0,
+            "fn": 4,
+            "review": 0,
+            "total": 12,
+            "accuracy": 0.6666666666666666,
+            "strongRecall": 0.6363636363636364,
+            "weakRecall": 1,
+            "balancedAccuracy": 0.8181818181818181
+          },
+          "network-hard": {
+            "tp": 5,
+            "tn": 8,
+            "fp": 4,
+            "fn": 1,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.7222222222222222,
+            "strongRecall": 0.8333333333333334,
+            "weakRecall": 0.6666666666666666,
+            "balancedAccuracy": 0.75
+          },
+          "print-strong": {
+            "tp": 3,
+            "tn": 10,
+            "fp": 3,
+            "fn": 2,
+            "review": 0,
+            "total": 18,
+            "accuracy": 0.7222222222222222,
+            "strongRecall": 0.6,
+            "weakRecall": 0.7692307692307693,
+            "balancedAccuracy": 0.6846153846153846
+          }
+        }
+      },
+      "externalTwoStage": {
+        "tp": 0,
+        "tn": 2,
+        "fp": 0,
+        "fn": 0,
+        "review": 0,
+        "total": 2,
+        "accuracy": 1,
+        "strongRecall": null,
+        "weakRecall": 1,
+        "balancedAccuracy": null
+      }
+    }
+  }
+}
